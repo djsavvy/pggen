@@ -1,8 +1,8 @@
 package ltree
 
 import (
-	"github.com/jschaf/pggen"
-	"github.com/jschaf/pggen/internal/pgtest"
+	"github.com/djsavvy/pggen"
+	"github.com/djsavvy/pggen/internal/pgtest"
 	"github.com/stretchr/testify/assert"
 	"io/ioutil"
 	"path/filepath"

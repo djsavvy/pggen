@@ -5,7 +5,7 @@ import (
 	"github.com/stretchr/testify/require"
 	"testing"
 
-	"github.com/jschaf/pggen/internal/pgtest"
+	"github.com/djsavvy/pggen/internal/pgtest"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -2,8 +2,8 @@ package gotype
 
 import (
 	"bytes"
-	"github.com/jschaf/pggen/internal/casing"
-	"github.com/jschaf/pggen/internal/pg"
+	"github.com/djsavvy/pggen/internal/casing"
+	"github.com/djsavvy/pggen/internal/pg"
 	"regexp"
 	"strconv"
 	"strings"
@@ -16,11 +16,11 @@ type Type interface {
 	// package path is the same, return the BaseName. Otherwise, qualify the type
 	// with Package.
 	QualifyRel(pkgPath string) string
-	// Import returns the full package path, like "github.com/jschaf/pggen/foo".
+	// Import returns the full package path, like "github.com/djsavvy/pggen/foo".
 	// Empty for builtin types.
 	Import() string
 	// Package returns the last part of the package path like "qux" in the package
-	// "github.com/jschaf/pggen/qux". Empty for builtin types.
+	// "github.com/djsavvy/pggen/qux". Empty for builtin types.
 	Package() string
 	// BaseName returns the base name of the type, like "Foo" in:
 	//   type Foo int
@@ -38,7 +38,7 @@ type (
 	// ArrayType is a Go slice type.
 	ArrayType struct {
 		PgArray pg.ArrayType // original Postgres array type
-		PkgPath string       // fully qualified package path, like "github.com/jschaf/pggen"
+		PkgPath string       // fully qualified package path, like "github.com/djsavvy/pggen"
 		Pkg     string       // last part of the package path like "pggen" or empty for builtin types
 		Name    string       // name of Go slice type in UpperCamelCase with leading brackets, like "[]Foo"
 		Elem    Type         // base type of the slice, like int for []int
@@ -171,7 +171,7 @@ func NewEnumType(pkgPath string, pgEnum pg.EnumType, caser casing.Caser) EnumTyp
 }
 
 // NewOpaqueType creates a OpaqueType by parsing the fully qualified Go type
-// like "github.com/jschaf/pggen.GenerateOpts", or a builtin type like "string".
+// like "github.com/djsavvy/pggen.GenerateOpts", or a builtin type like "string".
 // Supports slice and pointer types:
 //
 //   - []int
@@ -211,7 +211,7 @@ func NewOpaqueType(qualType string) OpaqueType {
 var majorVersionRegexp = regexp.MustCompile(`^v[0-9]+$`)
 
 // ExtractShortPackage gets the last part of a package path like "generate" in
-// "github.com/jschaf/pggen/generate".
+// "github.com/djsavvy/pggen/generate".
 func ExtractShortPackage(pkgPath []byte) string {
 	parts := bytes.Split(pkgPath, []byte{'/'})
 	shortPkg := parts[len(parts)-1]

@@ -1,6 +1,6 @@
-[![Test](https://github.com/jschaf/pggen/workflows/Test/badge.svg)](https://github.com/jschaf/pggen/actions?query=workflow%3ATest) 
-[![Lint](https://github.com/jschaf/pggen/workflows/Lint/badge.svg)](https://github.com/jschaf/pggen/actions?query=workflow%3ALint) 
-[![GoReportCard](https://goreportcard.com/badge/github.com/jschaf/pggen)](https://goreportcard.com/report/github.com/jschaf/pggen)
+[![Test](https://github.com/djsavvy/pggen/workflows/Test/badge.svg)](https://github.com/djsavvy/pggen/actions?query=workflow%3ATest) 
+[![Lint](https://github.com/djsavvy/pggen/workflows/Lint/badge.svg)](https://github.com/djsavvy/pggen/actions?query=workflow%3ALint) 
+[![GoReportCard](https://goreportcard.com/badge/github.com/djsavvy/pggen)](https://goreportcard.com/report/github.com/djsavvy/pggen)
 
 # pggen - generate type safe Go methods from Postgres SQL queries
 
@@ -157,7 +157,7 @@ other than `~/bin/pggen`.
 -   MacOS Apple Silicon (arm64)
 
     ```shell
-    PGGEN_URL='https://github.com/jschaf/pggen/releases/latest/download/pggen-darwin-arm64.zip';
+    PGGEN_URL='https://github.com/djsavvy/pggen/releases/latest/download/pggen-darwin-arm64.zip';
     curl --silent --show-error --location --fail "$PGGEN_URL" --output "${TMPDIR:-/private/tmp}/pggen.zip" &&
       unzip -p "${TMPDIR:-/private/tmp}/pggen.zip" pggen-darwin-arm64 > ~/bin/pggen &&
       chmod +x ~/bin/pggen
@@ -166,7 +166,7 @@ other than `~/bin/pggen`.
 -   MacOS Intel (amd64)
 
     ```shell
-    PGGEN_URL='https://github.com/jschaf/pggen/releases/latest/download/pggen-darwin-amd64.zip';
+    PGGEN_URL='https://github.com/djsavvy/pggen/releases/latest/download/pggen-darwin-amd64.zip';
     curl --silent --show-error --location --fail "$PGGEN_URL" --output "${TMPDIR:-/private/tmp}/pggen.zip" &&
       unzip -p "${TMPDIR:-/private/tmp}/pggen.zip" pggen-darwin-amd64 > ~/bin/pggen &&
       chmod +x ~/bin/pggen
@@ -175,7 +175,7 @@ other than `~/bin/pggen`.
 -   Linux (amd64)
 
     ```shell
-    PGGEN_URL='https://github.com/jschaf/pggen/releases/latest/download/pggen-linux-amd64.zip';
+    PGGEN_URL='https://github.com/djsavvy/pggen/releases/latest/download/pggen-linux-amd64.zip';
     curl --silent --show-error --location --fail "$PGGEN_URL" --output "${TMPDIR:-/tmp}/pggen.zip" &&
       unzip -p "${TMPDIR:-/tmp}/pggen.zip" pggen-linux-amd64 > ~/bin/pggen &&
       chmod +x ~/bin/pggen
@@ -184,7 +184,7 @@ other than `~/bin/pggen`.
 -   Windows (amd64)
 
     ```shell
-    PGGEN_URL='https://github.com/jschaf/pggen/releases/latest/download/pggen-windows-amd64.zip';
+    PGGEN_URL='https://github.com/djsavvy/pggen/releases/latest/download/pggen-windows-amd64.zip';
     curl --silent --show-error --location --fail "$PGGEN_URL" --output "${TMPDIR:-/tmp}/pggen.zip" &&
       unzip -p "${TMPDIR:-/tmp}/pggen.zip" pggen-windows-amd64.exe > ~/bin/pggen.exe &&
       chmod +x ~/bin/pggen.exe
@@ -201,7 +201,7 @@ pggen gen go --help
 Requires Go 1.16 because pggen uses `go:embed`. Installs to `$GOPATH/bin`.
 
 ```shell
-go install github.com/jschaf/pggen/cmd/pggen@latest
+go install github.com/djsavvy/pggen/cmd/pggen@latest
 ```
     
 Make sure pggen works:
@@ -366,8 +366,8 @@ Examples embedded in the repo:
         --go-type 'int8=*int' \
         --go-type 'int4=int' \
         --go-type '_int4=[]int' \
-        --go-type 'text=*github.com/jschaf/pggen/mytype.String' \
-        --go-type '_text=[]*github.com/jschaf/pggen/mytype.String'
+        --go-type 'text=*github.com/djsavvy/pggen/mytype.String' \
+        --go-type '_text=[]*github.com/djsavvy/pggen/mytype.String'
     ```
     
     pgx must be able to decode the Postgres type using the given Go type. That 

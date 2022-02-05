@@ -1,8 +1,8 @@
 package custom_types
 
 import (
-	"github.com/jschaf/pggen"
-	"github.com/jschaf/pggen/internal/pgtest"
+	"github.com/djsavvy/pggen"
+	"github.com/djsavvy/pggen/internal/pgtest"
 	"github.com/stretchr/testify/assert"
 	"io/ioutil"
 	"path/filepath"
@@ -22,8 +22,8 @@ func TestGenerate_Go_Example_CustomTypes(t *testing.T) {
 			GoPackage:  "custom_types",
 			Language:   pggen.LangGo,
 			TypeOverrides: map[string]string{
-				"text":    "github.com/jschaf/pggen/example/custom_types/mytype.String",
-				"int8":    "github.com/jschaf/pggen/example/custom_types.CustomInt",
+				"text":    "github.com/djsavvy/pggen/example/custom_types/mytype.String",
+				"int8":    "github.com/djsavvy/pggen/example/custom_types.CustomInt",
 				"my_int":  "int",
 				"_my_int": "[]int",
 			},

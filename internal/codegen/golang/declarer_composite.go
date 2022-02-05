@@ -1,8 +1,8 @@
 package golang
 
 import (
-	"github.com/jschaf/pggen/internal/codegen/golang/gotype"
-	"github.com/jschaf/pggen/internal/pg"
+	"github.com/djsavvy/pggen/internal/codegen/golang/gotype"
+	"github.com/djsavvy/pggen/internal/pg"
 	"strconv"
 	"strings"
 )

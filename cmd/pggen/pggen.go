@@ -5,9 +5,9 @@ import (
 	"flag"
 	"fmt"
 	"github.com/bmatcuk/doublestar"
-	"github.com/jschaf/pggen"
-	"github.com/jschaf/pggen/internal/flags"
-	"github.com/jschaf/pggen/internal/texts"
+	"github.com/djsavvy/pggen"
+	"github.com/djsavvy/pggen/internal/flags"
+	"github.com/djsavvy/pggen/internal/texts"
 	"github.com/peterbourgon/ff/v3/ffcli"
 	"go.uber.org/zap"
 	"os"
@@ -92,7 +92,7 @@ func newGenCmd() *ffcli.Command {
 			"or custom mapping like 'apis=APIs'")
 	goTypes := flags.Strings(fset, "go-type", nil,
 		"custom type mapping from Postgres to fully qualified Go type, "+
-			"like 'device_type=github.com/jschaf/pggen.DeviceType'")
+			"like 'device_type=github.com/djsavvy/pggen.DeviceType'")
 	logLvl := zap.InfoLevel
 	fset.Var(&logLvl, "log", "log level: debug, info, or error")
 	goSubCmd := &ffcli.Command{

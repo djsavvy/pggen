@@ -3,8 +3,8 @@ package composite
 import (
 	"context"
 	"github.com/jackc/pgx/v4"
-	"github.com/jschaf/pggen/internal/errs"
-	"github.com/jschaf/pggen/internal/pgtest"
+	"github.com/djsavvy/pggen/internal/errs"
+	"github.com/djsavvy/pggen/internal/pgtest"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"

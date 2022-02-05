@@ -4,7 +4,7 @@ import (
 	"context"
 	"github.com/google/go-cmp/cmp"
 	"github.com/jackc/pgtype"
-	"github.com/jschaf/pggen/internal/pgtest"
+	"github.com/djsavvy/pggen/internal/pgtest"
 	"github.com/shopspring/decimal"
 	"github.com/stretchr/testify/require"
 

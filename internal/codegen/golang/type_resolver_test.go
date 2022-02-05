@@ -2,15 +2,15 @@ package golang
 
 import (
 	"github.com/jackc/pgtype"
-	"github.com/jschaf/pggen/internal/casing"
-	"github.com/jschaf/pggen/internal/codegen/golang/gotype"
-	"github.com/jschaf/pggen/internal/pg"
+	"github.com/djsavvy/pggen/internal/casing"
+	"github.com/djsavvy/pggen/internal/codegen/golang/gotype"
+	"github.com/djsavvy/pggen/internal/pg"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )
 
 func TestTypeResolver_Resolve(t *testing.T) {
-	testPkgPath := "github.com/jschaf/pggen/internal/codegen/golang/test_resolve"
+	testPkgPath := "github.com/djsavvy/pggen/internal/codegen/golang/test_resolve"
 	caser := casing.NewCaser()
 	caser.AddAcronym("ios", "IOS")
 	caser.AddAcronym("macos", "MacOS")

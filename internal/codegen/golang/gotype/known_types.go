@@ -2,7 +2,7 @@ package gotype
 
 import (
 	"github.com/jackc/pgtype"
-	"github.com/jschaf/pggen/internal/pg/pgoid"
+	"github.com/djsavvy/pggen/internal/pg/pgoid"
 )
 
 // FindKnownTypePgx returns the native pgx type, like pgtype.Text, if known, for

@@ -3,7 +3,7 @@ package nested
 import (
 	"context"
 	"github.com/jackc/pgx/v4"
-	"github.com/jschaf/pggen/internal/pgtest"
+	"github.com/djsavvy/pggen/internal/pgtest"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )
